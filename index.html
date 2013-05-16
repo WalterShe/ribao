@@ -53,10 +53,10 @@
 <h3>安装</h3>
 
 <p>初次安装好redis后，执行如下命令添加管理员账户： </p>
-<p>redis 127.0.0.1:6379&gt; incr next_user_id (integer)</p>
-<p> 1 </p>
-<p>执行完该命令后表明 next_user_id 的值为1，然后执行如下命令（1:user_name和1:password中的1即为上一步执行incr next_user_id后的 next_user_id的值） r</p>
-<p>edis 127.0.0.1:6379&gt; hmset users 1:user_name adminn 1:password 20eabe5d64b0e216796e834f52d61f OK </p>
+<p>redis 127.0.0.1:6379&gt; incr next_user_id </p>
+<p>(integer)1 </p>
+<p>执行完该命令后表明 next_user_id 的值为1，然后执行如下命令（1:user_name和1:password中的1即为上一步执行incr next_user_id后的 next_user_id的值</p>
+<p> redis 127.0.0.1:6379&gt; hmset users 1:user_name adminn 1:password 20eabe5d64b0e216796e834f52d61f OK </p>
 <p>执行下面的命令将管理员adminn的id添加到管理员集合中 r</p>
 <p>edis 127.0.0.1:6379&gt; sadd administrators 1</p>
 <p>(integer) 1</p>
