@@ -18,11 +18,11 @@
         <h1><span style="color:#fff">“One Day”</span> Daily Report</h1>
         <h2 style="color:#444">“一天”，一个简单易用的日报系统</h2>
 
-        <!-- <section id="downloads">
+        <section id="downloads">
           <a href="https://github.com/WalterShe/dailyreport/zipball/master" class="btn">Download as .zip</a>
           <a href="https://github.com/WalterShe/dailyreport/tarball/master" class="btn">Download as .tar.gz</a>
           <a href="https://github.com/WalterShe/dailyreport" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>-->
+        </section>
       </div>
     </header>
 
@@ -45,11 +45,23 @@
 <p><img class="img-polaroid" src="images/users.png" width="783" height="587" alt="创建用户界面"></p>
 <h3>下载</h3>
 
-<p>...</p>
+<section id="downloads">
+          <a href="https://github.com/WalterShe/dailyreport/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/WalterShe/dailyreport/tarball/master" class="btn">Download as .tar.gz</a>
+        </section>
 
 <h3>安装</h3>
 
-<p>...</p>
+<p>初次安装好redis后，执行如下命令添加管理员账户： </p>
+<p>redis 127.0.0.1:6379&gt; incr next_user_id (integer)</p>
+<p> 1 </p>
+<p>执行完该命令后表明 next_user_id 的值为1，然后执行如下命令（1:user_name和1:password中的1即为上一步执行incr next_user_id后的 next_user_id的值） r</p>
+<p>edis 127.0.0.1:6379&gt; hmset users 1:user_name adminn 1:password 20eabe5d64b0e216796e834f52d61f OK </p>
+<p>执行下面的命令将管理员adminn的id添加到管理员集合中 r</p>
+<p>edis 127.0.0.1:6379&gt; sadd administrators 1</p>
+<p>(integer) 1</p>
+<p>执行完以上命令后我们新增加了一个管理员账户adminn,密码为1234567。可</p>
+<p>以使用该账户登陆进入管理后台进行管理。</p>
 
 <h3>支持和bug发送</h3>
 
