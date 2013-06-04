@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <meta name="description" content="一天日报系统是一个开源的日报系统，该系统包含了网页版，安卓和Iphone版，均免费使用，该系统可以部署在自己公司的服务器上，这样公司员工可以在任何地点书写自己的日报和浏览日报">
+    <meta name="description" content="一天日报是一个开源的写日报工具，该工具简单易用，包含网页和手机版。使用该日报工具可以随时随地使用手机或者电脑写和浏览日报">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <title>Daily Report by WalterShe</title>
+    <title>“一天”日报工具-Daily Report tool</title>
   </head>
 
   <body>
@@ -32,24 +32,23 @@
         <h3>介绍</h3>
 
 <p>还在使用邮件或者word,excel之类的东西收发日报吗，太不方便了，赶快使用“一天”日报系统吧。</p>
-<p>“一天”日报系统是一个开源的日报系统，该系统包含了网页版，<i>安卓和Iphone版（开发中）</i>，均免费使用，该系统可以部署在自己公司的服务器上，这样公司员工可以在任何地点书写自己的日报和浏览日报。</p>
-<p>“一天”日报系统提供了丰富的文字编辑能力，让你可以随心所欲的书写出各种格式的文本。日报会按照时间顺序归类在一起，方便你日后对以往工作的回顾。</p>
-<p><a href="images/reports.png"><img class="img-polaroid" src="images/reports.png" width="792" alt="浏览日报界面"></a></p>
-<p>部门领导可以很方便的浏览自己下属的日报。</p>
-<p><a href="images/subordinateReport.png"><img class="img-polaroid" src="images/subordinateReport.png" width="792" alt="下属日报界面"></a></p>
-<p>创建部门</p>
-<p><img class="img-polaroid" src="images/createDepartment.png" alt="创建部门界面" width="784" height="491"></p>
-<p>编辑部门</p>
-<p><img class="img-polaroid" src="images/editDepartment.png" width="788" height="508" alt="编辑部门界面"></p>
-
-<p>创建新用户</p>
-<p><img class="img-polaroid" src="images/users.png" width="783" height="587" alt="创建用户界面"><!-- <section id="downloads">
+<p>“一天”日报是一个开源的写日报工具，包含了网页版和手机版<i></i>。它可以部署在自己公司的服务器上，这样公司员工可以在任何地点书写自己的日报和浏览日报。</p>
+<p>“一天”日报提供了丰富的文字编辑能力，让你可以随心所欲的书写出各种格式的文本，手机版目前只提供简单的书写。日报会按照时间顺序归类在一起，方便你日后对以往工作的回顾。</p>
+<h3>截图</h3>
+<p>我的日报界面<br><a href="images/reports.png"><img class="img-polaroid" src="images/reports.png" width="792" alt="浏览日报界面"></a></p>
+<p>下属的日报界面<br><a href="images/subordinateReport.png"><img class="img-polaroid" src="images/subordinateReport.png" width="792" alt="下属日报界面"></a><br>
+编辑部门界面<br><img class="img-polaroid" src="images/editDepartment.png" width="788" height="508" alt="编辑部门界面"></p>
+<p>创建新用户界面<br><img class="img-polaroid" src="images/users.png" width="783" height="587" alt="创建用户界面">
+<p>手机版写日报界面<br><img class="img-polaroid" src="images/writeM.png" width="405" height="510" alt="手机版写日报界面"></p>
+<p>手机版下属日报界面<br><img class="img-polaroid"  src="images/subordinateReportM.png" width="405" height="511" alt="手机版下属日报界面"></p>
+<p>手机版设置界面<br><img class="img-polaroid"  src="images/settingM.png" width="392" height="513" alt="手机版设置界面"></p>
+<!-- <section id="downloads">
           <a href="https://github.com/WalterShe/dailyreport/zipball/master" class="btn">Download as .zip</a>
           <a href="https://github.com/WalterShe/dailyreport/tarball/master" class="btn">Download as .tar.gz</a>
         </section>--></p>
 <h3>安装</h3>
 
-<p>安装redis数据库，安装完成后执行如下命令添加管理员账户： </p>
+<p>安装<a href="http://www.nodejs.org/" target="_new">Node.js</a>和<a href="http://www.redis.io/" target="_blank">redis数据库</a>，安装完成后启动redis数据库并执行如下命令添加管理员账户： </p>
 <p>redis 127.0.0.1:6379&gt; incr next_user_id </p>
 <p>(integer) 1 </p>
 <p>执行完该命令后表明 next_user_id 的值为1，然后执行如下命令（1:user_name和1:password中的1即为上一步执行incr next_user_id后的 next_user_id的值）</p>
